@@ -1,124 +1,83 @@
+/* ===== GLOBAL ===== */
 body {
   background: #f4f6f9;
+  font-family: "Segoe UI", sans-serif;
 }
 
-/* ================= SLIDER ================= */
+/* ===== SLIDER ===== */
+.main {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: black;
+}
 
 .center {
   width: 100%;
   height: 100%;
 }
 
+.center img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Slider Buttons */
 .left, .right {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 10;
 }
 
-.left { left: 15px; }
-.right { right: 15px; }
+.left { left: 20px; }
+.right { right: 20px; }
 
 .icon {
-  font-size: 35px;
   color: white;
-  background: rgba(0,0,0,0.6);
-  padding: 12px;
-  border-radius: 50%;
+  font-size: 40px;
   cursor: pointer;
+  background: rgba(0,0,0,0.6);
+  padding: 10px;
+  border-radius: 50%;
+  transition: 0.3s;
 }
 
-/* ================= HEADINGS ================= */
+.icon:hover {
+  background: red;
+}
+
+/* ===== HEADINGS ===== */
 .heading, .heading2 {
-  text-align: center;
-  margin: 50px 0 30px;
   font-weight: bold;
+  letter-spacing: 1px;
 }
 
-/* ================= PRODUCTS ================= */
+/* ===== PRODUCTS ===== */
+.product-card {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: 0.4s;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+}
+
 .product-card img {
   width: 100%;
   height: 280px;
-  object-fit: cover;
-  border-radius: 10px;
+  object-fit: contain;
 }
 
-/* ================= SERVICES ================= */
-.services-section {
-  padding: 80px 10%;
-  background: #f8f9fa;
-  text-align: center;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.service-card {
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  overflow: hidden;
-}
-
-.service-card img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-}
-
-.service-card h3 {
-  margin: 15px 0 5px;
-}
-
-.service-card p {
-  font-size: 14px;
-  color: #666;
-}
-
-/* ================= ABOUT ================= */
-.about-section {
-  padding: 60px 0;
-}
-
-/* ================= FOOTER ================= */
-.footer {
-  background: #111;
-  color: white;
-  padding: 40px 0;
-}
-
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 30px;
-  padding: 0 10%;
-}
-
-.footer-box p,
-.footer-box li {
-  color: #aaa;
-  font-size: 14px;
-}
-
-.footer-bottom {
-  text-align: center;
-  background: black;
-  padding: 10px;
-  margin-top: 30px;
-}
-
-/* ================= CART ================= */
-.cartimg {
-  height: 50px;
-  width: 50px;
-  object-fit: cover;
-}
-
-
-
-/* ===== SERVICES (Kashmir, Delhi, Jodhpur) ===== */
+/* ===== SERVICES ===== */
 .services-img {
   width: 100%;
   height: 260px;
@@ -133,30 +92,64 @@ body {
   box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
 
-.card-img-top {
-  height: 240px;    
-  width: 100%;
-  object-fit: cover;   
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+/* ===== REVIEWS ===== */
+.container h4 {
+  font-weight: bold;
 }
 
-
-
-.main {
-  position: relative;
-  overflow: hidden;
-  height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.container p {
+  color: gray;
 }
 
-.center img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  /* object-position: center; */
-  /* background-color: #000;  */
+/* ===== FOOTER ===== */
+.footer {
+  background: #111;
+  color: white;
+  padding: 40px 0;
 }
 
+.footer h3,
+.footer h4 {
+  color: red;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+/* ===== CART IMAGE ===== */
+.cartimg {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+/* ===== RESPONSIVE (MOBILE) ===== */
+@media (max-width: 768px) {
+  .main {
+    height: 40vh;
+  }
+
+  .center img {
+    object-fit: contain;
+    background-color: white;
+
+  }
+
+  .icon {
+    font-size: 25px;
+    padding: 6px;
+  }
+
+  .product-card img {
+    height: 220px;
+  }
+
+  .services-img {
+    height: 200px;
+  }
+
+  .footer {
+    text-align: center;
+  }
+}
