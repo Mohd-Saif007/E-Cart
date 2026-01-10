@@ -1,28 +1,25 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import Jeansdata from "./json/JeansJson"
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import TshirtData from "../json/TshirtJson";
 
-export default function Jeans({addtocart}) {
-  const nav = useNavigate();
+export default function Tshirt({ addtocart }) {
+  const Navigator = useNavigate();
 
-  function next(data){
-    nav("/details",{state:{mydata:data}})
+  function next(data) {
+    Navigator("/details", { state: { mydata: data } });
   }
 
   return (
     <>
       <div className="container-fluid mt-4">
         <div className="row justify-content-center">
-
-          {Jeansdata.map((users) => (
+          {TshirtData.map((users) => (
             <div className="col-sm-4 col-md-3 my-3" key={users.id}>
-              
               <div className="card border-0 shadow-sm h-100 rounded-4">
-
                 <div className="bg-light p-3 rounded-top-4 text-center">
-                  <img 
-                    src={users.image} 
-                    alt="" 
+                  <img
+                    src={users.image}
+                    alt=""
                     className="img-fluid"
                     style={{ height: "220px", objectFit: "contain" }}
                   />
@@ -33,25 +30,22 @@ export default function Jeans({addtocart}) {
                   <h6 className="fw-bold">{users.tittle}</h6>
 
                   <h5 className="text-success mt-2">₹ {users.price}</h5>
-{/* 
-                  <p className="mb-2">
-                    {users.quantity > 0 ? (
-                      <span className="badge bg-success">{users.quantity} in stock</span>
-                    ) : (
-                      <span className="badge bg-danger">Out of stock</span>
-                    )}
-                  </p> */}
+
+              
 
                   <p className="text-secondary small">
                     {users.description.slice(0, 50)}...
                   </p>
 
                   <div className="d-flex justify-content-center gap-2 mt-3">
-                    <button className="btn btn-outline-dark btn-sm" onClick={()=>addtocart(users)}>
+                    <button
+                      className="btn btn-outline-dark btn-sm"
+                      onClick={() => addtocart(users)}
+                    >
                       Add to Cart
                     </button>
 
-                    <button 
+                    <button
                       className="btn btn-success btn-sm"
                       onClick={() => next(users.tittle)}
                     >
@@ -59,14 +53,11 @@ export default function Jeans({addtocart}) {
                     </button>
                   </div>
                 </div>
-
               </div>
-
             </div>
           ))}
-
         </div>
       </div>
     </>
-  )
+  );
 }

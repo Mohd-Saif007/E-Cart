@@ -1,8 +1,8 @@
-import j1 from "../imagej/j1.jpg";
-import j2 from "../imagej/j2.jpg";
-import j3 from "../imagej/j3.jpg";
-import j4 from "../imagej/j4.jpg";
-import j5 from "../imagej/j5.jpg";
+import j1 from "../../public/image/Jeans/j1.jpg";
+import j2 from "../../public/image/Jeans/j2.jpg";
+import j3 from "../../public/image/Jeans/j3.jpg";
+import j4 from "../../public/image/Jeans/j4.jpg";
+import j5 from "../../public/image/Jeans/j5.jpg";
 const Jeansdata = [
   {
     id: 1,

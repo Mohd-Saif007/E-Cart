@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "../src/Home";
-import About from "../src/About";
-import Contact from "../src/Contact";
-import Service from "../src/Service";
-import Navbar from "../src/Navbar";
-import Tshirt from "../src/Tshirt";
-import Jeans from "../src/Jeans";
-import Shoes from "../src/Shoes";
-import Details from "./Details";
-import Cart from "./Cart";
-import Buy from "./Buy";
-export default function Rout() {
+import Home from "../pages/Home";
+import About from "../pages/About";
+import Contact from "../pages/Contact";
+import Service from "../pages/Service";
+import Navbar from "../component/Navbar";
+import Tshirt from "../pages/Tshirt";
+import Jeans from "../pages/Jeans";
+import Shoes from "../pages/Shoes";
+import Details from "../pages/Details";
+import Cart from "../pages/Cart";
+import Buy from "../pages/Buy";
+export default function Router() {
   const [cartData, setCart] = useState([]);
 
   function addtoCart(data) {
@@ -27,7 +27,7 @@ export default function Rout() {
       alert("Product already in cart.");
       return;
     }
-    // console.log(data);
+    
     setCart([...cartData, data]);
     alert("Data added in cart");
   }
@@ -46,8 +46,7 @@ export default function Rout() {
             <Route path="/Jeans" element={<Jeans addtocart={addtoCart} />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/service" element={<Service />} />
-            <Route path="/buy" element={<Buy setCart={setCart} /> } />
-            <Route
+            <Route path="/buy" element={<Buy setCart={setCart} cartData={cartData} />} /><Route
               path="/cart"
               element={<Cart cartData={cartData} setCart={setCart} />}
             />

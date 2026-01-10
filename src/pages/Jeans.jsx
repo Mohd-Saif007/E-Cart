@@ -1,12 +1,12 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import shoesData from './json/ShoesJosn'
+import Jeansdata from "../json/JeansJson"
 
-export default function Shoes({addtocart}) {
-  const nav = useNavigate();
+export default function Jeans({addtocart}) {
+  const Navigator = useNavigate();
 
   function next(data){
-    nav("/details",{state:{mydata:data}})
+    Navigator("/details",{state:{mydata:data}})
   }
 
   return (
@@ -14,7 +14,7 @@ export default function Shoes({addtocart}) {
       <div className="container-fluid mt-4">
         <div className="row justify-content-center">
 
-          {shoesData.map((users) => (
+          {Jeansdata.map((users) => (
             <div className="col-sm-4 col-md-3 my-3" key={users.id}>
               
               <div className="card border-0 shadow-sm h-100 rounded-4">
@@ -34,13 +34,6 @@ export default function Shoes({addtocart}) {
 
                   <h5 className="text-success mt-2">₹ {users.price}</h5>
 
-                  {/* <p className="mb-2">
-                    {users.quantity > 0 ? (
-                      <span className="badge bg-success">{users.quantity} in stock</span>
-                    ) : (
-                      <span className="badge bg-danger">Out of stock</span>
-                    )}
-                  </p> */}
 
                   <p className="text-secondary small">
                     {users.description.slice(0, 50)}...

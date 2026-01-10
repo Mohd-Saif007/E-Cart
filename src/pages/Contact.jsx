@@ -2,24 +2,40 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [address, setAddress] = useState("");
-  const [message, setMessage] = useState("");
-  const nav = useNavigate();
+
+  const [userDetails, setUserDetails] = useState({
+    name: "",
+    email: "",
+    address: "",
+    message: ""
+  });
+
+  const Navigator = useNavigate();
+
+  function handleUserDetails(fieldName, value) {
+    setUserDetails({
+      ...userDetails,
+      [fieldName]: value
+    });
+  }
 
   function next() {
+    const { name, email, message } = userDetails;
+
     if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
       alert("⚠️ Please fill all input boxes before sending the message!");
     } else {
       alert("✅ Order Confirmed!");
-      nav("/home");
+      Navigator("/buy");
     }
 
-    setName("");
-    setEmail("");
-    setMessage("");
-    setAddress("");
+    
+    setUserDetails({
+      name: "",
+      email: "",
+      address: "",
+      message: ""
+    });
   }
 
   return (
@@ -30,6 +46,7 @@ export default function Contact() {
       </p>
 
       <div className="row justify-content-center">
+
         {/* Left Info */}
         <div className="col-lg-5 col-md-6 mb-4">
           <div className="card shadow p-4 h-100">
@@ -43,13 +60,14 @@ export default function Contact() {
         {/* Right Form */}
         <div className="col-lg-7 col-md-6">
           <div className="card shadow p-4">
+
             <div className="mb-3">
               <input
                 type="text"
                 className="form-control"
                 placeholder="Your Name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                value={userDetails.name}
+                onChange={(e) => handleUserDetails("name", e.target.value)}
               />
             </div>
 
@@ -58,8 +76,8 @@ export default function Contact() {
                 type="email"
                 className="form-control"
                 placeholder="Your Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={userDetails.email}
+                onChange={(e) => handleUserDetails("email", e.target.value)}
               />
             </div>
 
@@ -68,8 +86,8 @@ export default function Contact() {
                 type="text"
                 className="form-control"
                 placeholder="Your Address"
-                value={address}
-                onChange={(e) => setAddress(e.target.value)}
+                value={userDetails.address}
+                onChange={(e) => handleUserDetails("address", e.target.value)}
               />
             </div>
 
@@ -78,16 +96,18 @@ export default function Contact() {
                 className="form-control"
                 rows="4"
                 placeholder="Your Message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
+                value={userDetails.message}
+                onChange={(e) => handleUserDetails("message", e.target.value)}
               ></textarea>
             </div>
 
             <button className="btn btn-danger w-100" onClick={next}>
               Send Message
             </button>
+
           </div>
         </div>
+
       </div>
     </div>
   );

@@ -1,8 +1,8 @@
-import t1 from "../imaget/t1.jpg";
-import t2 from "../imaget/t2.jpg";
-import t3 from "../imaget/t3.jpg";
-import t4 from "../imaget/t4.jpg";
-import t5 from "../imaget/t5.jpg";
+import t1 from "../../public/image/Tshirt/t1.jpg";
+import t2 from "../../public/image/Tshirt/t2.jpg";
+import t3 from "../../public/image/Tshirt/t3.jpg";
+import t4 from "../../public/image/Tshirt/t4.jpg";
+import t5 from "../../public/image/Tshirt/t5.jpg";
 const TshirtData = [
   {
     id: 1,

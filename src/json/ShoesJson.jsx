@@ -1,8 +1,8 @@
-import s1 from '../imageso/s1.jpg'
-import s2 from '../imageso/s2.jpg'
-import s3 from '../imageso/s3.jpg'
-import s4 from '../imageso/s4.jpg'
-import s5 from '../imageso/s5.jpg'
+import s1 from '../../public/image/Shoes/s1.jpg'
+import s2 from '../../public/image/Shoes/s2.jpg'
+import s3 from '../../public/image/Shoes/s3.jpg'
+import s4 from '../../public/image/Shoes/s4.jpg'
+import s5 from '../../public/image/Shoes/s5.jpg'
 
 const shoesData=[
     { 

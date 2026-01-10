@@ -1,5 +1,5 @@
 import React from "react";
-import aboutImg from "../src/image/dress.jpg";
+import aboutImg from "../../public/image/Slider/dress.jpg";
 
 export default function About() {
   return (

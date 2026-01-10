@@ -6,7 +6,7 @@ export default function Cart({ cartData, setCart }) {
 
   useEffect(() => {
     updateTotal();
-  });
+  },[cartData]);
 
   function updateTotal() {
     let tot = 0;
@@ -14,7 +14,7 @@ export default function Cart({ cartData, setCart }) {
     setTotal(tot);
   }
 
-  function quanChan(data, x) {
+  function QuantityChange(data, x) {
     var ind;
     cartData.forEach((products, index) => {
       if (products.tittle == data.tittle) {
@@ -66,14 +66,14 @@ export default function Cart({ cartData, setCart }) {
                     <td>
                       <button
                         className="btn btn-danger btn-sm"
-                        onClick={() => quanChan(products, -1)}
+                        onClick={() => QuantityChange(products, -1)}
                       >
                         -
                       </button>
                       <span className="mx-2">{products.quantity}</span>
                       <button
                         className="btn btn-success btn-sm"
-                        onClick={() => quanChan(products, +1)}
+                        onClick={() => QuantityChange(products, +1)}
                       >
                         +
                       </button>
@@ -113,14 +113,14 @@ export default function Cart({ cartData, setCart }) {
                       <div className="d-flex align-items-center">
                         <button
                           className="btn btn-danger btn-sm"
-                          onClick={() => quanChan(products, -1)}
+                          onClick={() => QuantityChange(products, -1)}
                         >
                           -
                         </button>
                         <span className="mx-2">{products.quantity}</span>
                         <button
                           className="btn btn-success btn-sm"
-                          onClick={() => quanChan(products, +1)}
+                          onClick={() => QuantityChange(products, +1)}
                         >
                           +
                         </button>
@@ -144,7 +144,7 @@ export default function Cart({ cartData, setCart }) {
             <div className="col-md-8"></div>
             <div className="col-md-4 text-end">
               <h4>Total : {total}</h4>
-              <Link to="/buy" className="btn btn-success w-100">
+              <Link to="/contact" className="btn btn-success w-100">
                 Buy
               </Link>
             </div>

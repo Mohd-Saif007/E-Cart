@@ -1,7 +1,7 @@
 import React from "react";
-import kashmir from "../src/image/kashmir.jpg";
-import delhi from "../src/image/delhi.jpg";
-import jodhpur from "../src/image/jodhpur.jpg";
+import kashmir from "../../public/image/Service/kashmir.jpg";
+import delhi from "../../public/image/Service/delhi.jpg";
+import jodhpur from "../../public/image/Service/jodhpur.jpg";
 
 export default function Service() {
   return (
