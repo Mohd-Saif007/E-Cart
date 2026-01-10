@@ -1,12 +1,19 @@
-# React + Vite
+1.E-Cart – Online Shopping Website
+E-Cart is a simple and user-friendly online shopping web application built using React.
+It allows users to browse products, view product details, add items to the cart, choose a payment method, and place an order.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2.Features
+View all products
+View product details
+Add products to cart
+Increase or decrease product quantity
+Remove products from cart
+Select payment method (UPI, Cash on Delivery, etc.)
+Place order successfully
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3.Technologies Used
+React
+React Router
+JavaScript
+Bootstrap
+CSS
