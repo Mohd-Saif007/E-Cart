@@ -1,7 +1,7 @@
 import React from "react";
-import TshirtDetail from "../component/TshirtDetail";
-import JeansDetail from "../component/JeansDetail";
-import ShoesDetail from "../component/ShoesDetail";
+import TshirtDetail from "../components/TshirtDetail";
+import JeansDetail from "../components/JeansDetail";
+import ShoesDetail from "../components/ShoesDetail";
 
 export default function Details() {
   return (

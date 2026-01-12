@@ -1,8 +1,8 @@
-import Slider from "../component/Slider";
-import Footer from "../component/Footer";
-import Service from "../component/Service";
-import Review from "../component/Review";
-import Product from "../component/Product";
+import Slider from "../components/Slider";
+import Footer from "../components/Footer";
+import Service from "../components/Service";
+import Review from "../components/Review";
+import Product from "../components/Product";
 export default function Home() {
   return (
     <>
