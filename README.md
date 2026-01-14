@@ -1,12 +1,5 @@
-# React + Vite
+1).Features=> Product listing (T-shirts, Jeans, Shoes, etc.) Product detail page Add to cart functionality Remove items from cart Cart summary with total price Payment method selection (UPI, COD, etc.) Order placement Responsive design for all devices Clean and reusable React components
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2).Tech Stack=> Frontend: React.js Routing: React Router State Management: useState, props Styling: CSS / Bootstrap Data: JSON based product data
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3).How it Works=> User opens the website Products are displayed on the home page User clicks on a product to see details User adds product to cart Cart page shows selected products and total price User selects payment method User places order successfully
